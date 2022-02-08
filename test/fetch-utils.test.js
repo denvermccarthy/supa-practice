@@ -42,17 +42,17 @@ test('getMovieByTitle should match using title', async(expect) => {
     expect.equal(resp.id, 2);
 });
 
-skip('getOldestMovie returns Episode IV', async(expect) => {
+test('getOldestMovie returns Episode IV', async(expect) => {
     const resp = await getOldestMovie();
     expect.equal(resp.title, 'Episode IV - A New Hope');
 });
 
-skip('getMoviesAfter returns all movies after a certain year', async(expect) => {
+test('getMoviesAfter returns all movies after a certain year', async(expect) => {
     const resp = await getMoviesAfter(2010);
     expect.equal(resp.length, 5);
 });
 
-skip('getHighestGrossingMovie returns the movie with the highest box_office amount', async(expect) => {
+test('getHighestGrossingMovie returns the movie with the highest box_office amount', async(expect) => {
     const resp = await getHighestGrossingMovie();
     expect.equal(resp.title, 'Star Wars: The Force Awakens');
 });
